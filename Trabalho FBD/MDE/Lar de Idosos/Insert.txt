@@ -1,0 +1,28 @@
+INSERT INTO `Responsaveis` (`idResponsaveis`, `NomeResp`, `TelefoneResp`) VALUES (1, 'Ana Silva', '123-456-7890');
+INSERT INTO `Responsaveis` (`idResponsaveis`, `NomeResp`, `TelefoneResp`) VALUES (2, 'Carlos Mendes', '987-654-3210');
+INSERT INTO `Responsaveis` (`idResponsaveis`, `NomeResp`, `TelefoneResp`) VALUES (3, 'Marta Oliveira', '555-555-5555');
+INSERT INTO `Responsaveis` (`idResponsaveis`, `NomeResp`, `TelefoneResp`) VALUES (4, 'Pedro Santos', '111-222-3333');
+INSERT INTO `Responsaveis` (`idResponsaveis`, `NomeResp`, `TelefoneResp`) VALUES (5, 'Laura Pereira', '999-888-7777');
+
+
+INSERT INTO `Idosos` (`idIdosos`, `NomeIdoso`, `Responsaveis_idResponsaveis`) VALUES (1, 'José Silva', 1);
+INSERT INTO `Idosos` (`idIdosos`, `NomeIdoso`, `Responsaveis_idResponsaveis`) VALUES (2, 'Maria Oliveira', 3);
+INSERT INTO `Idosos` (`idIdosos`, `NomeIdoso`, `Responsaveis_idResponsaveis`) VALUES (3, 'Antônio Mendes', 2);
+INSERT INTO `Idosos` (`idIdosos`, `NomeIdoso`, `Responsaveis_idResponsaveis`) VALUES (4, 'Joana Santos', 4);
+INSERT INTO `Idosos` (`idIdosos`, `NomeIdoso`, `Responsaveis_idResponsaveis`) VALUES (5, 'Francisco Pereira', 5);
+
+
+INSERT INTO `FuncionariosTerceirizados` (`idFuncionariosTerceirizados`, `NomeFT`, `TipoFT`, `ContatoFT`) VALUES (1, 'Dr. João', 1, '111-111-1111');
+INSERT INTO `FuncionariosTerceirizados` (`idFuncionariosTerceirizados`, `NomeFT`, `TipoFT`, `ContatoFT`) VALUES (2, 'Enf. Maria', 2, '222-222-2222');
+INSERT INTO `FuncionariosTerceirizados` (`idFuncionariosTerceirizados`, `NomeFT`, `TipoFT`, `ContatoFT`) VALUES (3, 'Dr. Luís', 1, '333-333-3333');
+INSERT INTO `FuncionariosTerceirizados` (`idFuncionariosTerceirizados`, `NomeFT`, `TipoFT`, `ContatoFT`) VALUES (4, 'Enf. Ana', 2, '444-444-4444');
+INSERT INTO `FuncionariosTerceirizados` (`idFuncionariosTerceirizados`, `NomeFT`, `TipoFT`, `ContatoFT`) VALUES (5, 'Dr. Carlos', 1, '555-555-5555');
+
+
+INSERT INTO `Atendimento` (`idAtendimento`, `TipoAtendimento`, `FuncionariosTerceirizados_idFuncionariosTerceirizados`, `Idosos_idIdosos`) VALUES (1, 'Consulta', 1, 1);
+INSERT INTO `Atendimento` (`idAtendimento`, `TipoAtendimento`, `FuncionariosTerceirizados_idFuncionariosTerceirizados`, `Idosos_idIdosos`) VALUES (2, 'Medicação', 2, 2);
+INSERT INTO `Atendimento` (`idAtendimento`, `TipoAtendimento`, `FuncionariosTerceirizados_idFuncionariosTerceirizados`, `Idosos_idIdosos`) VALUES (3, 'Consulta', 3, 3);
+INSERT INTO `Atendimento` (`idAtendimento`, `TipoAtendimento`, `FuncionariosTerceirizados_idFuncionariosTerceirizados`, `Idosos_idIdosos`) VALUES (4, 'Medicação', 4, 4);
+INSERT INTO `Atendimento` (`idAtendimento`, `TipoAtendimento`, `FuncionariosTerceirizados_idFuncionariosTerceirizados`, `Idosos_idIdosos`) VALUES (5, 'Consulta', 5, 5);
+
+

@@ -1,0 +1,17 @@
+-- Exclusão da tabela Clientes
+DELETE FROM `Clientes` WHERE `idClientes` = 4;
+
+-- Exclusão da tabela Carros
+DELETE FROM `Carros` WHERE `idCarros` = 3;
+
+-- Exclusão da tabela Funcionarios
+DELETE FROM `Funcionarios` WHERE `idFuncionarios` = 5;
+
+-- Exclusão da tabela Pecas
+DELETE FROM `Pecas` WHERE `idPecas` = 2;
+
+-- Exclusão da tabela Servicos
+DELETE FROM `Servicos` WHERE `idServicos` = 5;
+
+-- Exclusão da tabela OrdemDeServico
+DELETE FROM `OrdemDeServico` WHERE `idOrdemDeServico` = 1;

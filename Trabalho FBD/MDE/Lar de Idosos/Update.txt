@@ -1,0 +1,16 @@
+UPDATE `Responsaveis` SET `NomeResp` = 'Ana Maria Silva' WHERE `idResponsaveis` = 1;
+UPDATE `Responsaveis` SET `TelefoneResp` = '999-999-9999' WHERE `idResponsaveis` = 2;
+
+
+UPDATE `Idosos` SET `NomeIdoso` = 'José da Silva' WHERE `idIdosos` = 1;
+UPDATE `Idosos` SET `Responsaveis_idResponsaveis` = 2 WHERE `idIdosos` = 3;
+
+
+UPDATE `FuncionariosTerceirizados` SET `NomeFT` = 'Dr. João da Silva' WHERE `idFuncionariosTerceirizados` = 1;
+UPDATE `FuncionariosTerceirizados` SET `ContatoFT` = '777-777-7777' WHERE `idFuncionariosTerceirizados` = 2;
+
+
+UPDATE `Atendimento` SET `TipoAtendimento` = 'Consulta de Rotina' WHERE `idAtendimento` = 1;
+UPDATE `Atendimento` SET `FuncionariosTerceirizados_idFuncionariosTerceirizados` = 3 WHERE `idAtendimento` = 2;
+
+

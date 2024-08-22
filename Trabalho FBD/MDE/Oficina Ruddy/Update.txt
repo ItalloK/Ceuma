@@ -1,0 +1,23 @@
+-- Atualização da tabela Clientes
+UPDATE `Clientes` SET `TelCliente` = '987654321' WHERE `idClientes` = 1;
+
+-- Atualização da tabela Carros
+UPDATE `Carros` SET `ModeloCarro` = 'Celta', `PlacaCarro` = 'XYZ1234' WHERE `Clientes_idClientes` = 2;
+
+-- Atualização da tabela Funcionarios
+UPDATE `Funcionarios` SET `NomeFuncionario` = 'Mariana' WHERE `idFuncionarios` = 2;
+
+-- Atualização da tabela Pecas
+UPDATE `Pecas` SET `TipoPeca` = 'Elétrica' WHERE `idPecas` = 3;
+
+-- Atualização da tabela Servicos
+UPDATE `Servicos` SET `ValorPeca` = 60.00 WHERE `idServicos` = 1;
+UPDATE `Servicos` SET `TipoDeServico` = 'Reparo de Freio ABS' WHERE `idServicos` = 2;
+
+-- Atualização da tabela OrdemDeServico
+UPDATE `OrdemDeServico` SET `Data` = '2022-05-31 13:00:00' WHERE `idOrdemDeServico` = 3;
+
+
+
+
+

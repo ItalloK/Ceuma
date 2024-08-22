@@ -1,0 +1,12 @@
+-- Delete registros da tabela `Atendimento`
+DELETE FROM `Atendimento` WHERE `Idosos_idIdosos` IN (1, 3);
+
+-- Delete registros da tabela `Idosos`
+DELETE FROM `Idosos` WHERE `idIdosos` IN (1, 3);
+
+-- Delete registros da tabela `Responsaveis`
+DELETE FROM `Responsaveis` WHERE `idResponsaveis` IN (1, 2);
+
+
+-- Delete um funcionário específico da tabela `FuncionariosTerceirizados`
+DELETE FROM `FuncionariosTerceirizados` WHERE `idFuncionariosTerceirizados` = 2;
