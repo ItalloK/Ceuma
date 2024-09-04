@@ -9,8 +9,8 @@ int main(){
     for(int i = 0; i<5; i++){
         p = &vet[i];
         printf("Digite um valor para a posicao [%d]: \n", i);
-        scanf("%d", &*p);
-        ImprimeValor(&*p);
+        scanf("%d", p); // atualizado pois assim é mais pratico
+        ImprimeValor(p); // atualizado pois assim é mais pratico
     }
     return 0;
 }
