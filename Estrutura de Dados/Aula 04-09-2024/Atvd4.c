@@ -6,7 +6,20 @@ quando os índices forem diferentes. Calcule e imprima na tela apenas o somatór
 
 int main(){
 
-
-
+    int mat[3][3], total = 0;
+    for(int i = 0; i<3; i++){
+        for(int j = 0; j<3; j++){
+            if(i == j){
+                mat[i][j] = 2;
+            }
+            if(i != j){
+                mat[i][j] = -3;
+            }
+        }
+    }    
+    for (int i = 0; i < 3; i++) {
+        total += mat[i][i];
+    }
+    printf("Somatorio da diagonal principal: [%d]\n", total);
     return 0;
 }
