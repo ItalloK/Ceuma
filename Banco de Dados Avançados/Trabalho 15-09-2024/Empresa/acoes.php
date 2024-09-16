@@ -59,6 +59,16 @@
 		$email = $_POST['email'];
 		$senha = md5($_POST['password']);
 
+		## Verificação de Email ##
+		$sql = "SELECT Email FROM funcionario WHERE Email = '{$email}' AND Cpf != '{$cpf}'";
+		$res = $conn->query($sql);
+		if ($res->num_rows > 0) {
+			echo "<script>alert('O Email ja está em USO.');</script>";
+			echo "<script>location.href='home.php?page=funcionario-listar';</script>";
+			exit;
+		}
+		## Verificação de Email ##
+
 		$sql = "UPDATE funcionario SET 
 					Nome = '{$nome}', 
 					DataNascimento = '{$datanascimento}',
@@ -74,7 +84,7 @@
 			header('Location: home.php?page=funcionario-listar');
 		} else {
 			print "<script>alert('Não foi possível editar o cadastro do funcionário');</script>";
-			print "<script>location.href='?page=funcionario-edit';</script>";
+			echo "<script>location.href='home.php?page=funcionario-listar';</script>";
 		}
 		exit;
 	}
