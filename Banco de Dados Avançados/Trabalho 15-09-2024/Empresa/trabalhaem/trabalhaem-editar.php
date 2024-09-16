@@ -6,7 +6,7 @@
     $sql = "SELECT idProjeto, Nome FROM projeto";
     $result = $conn->query($sql);
 
-    $sql2 = "SELECT * FROM trabalha_em WHERE fkCpf = '{$cpf}'";
+    $sql2 = "SELECT * FROM trabalha_em WHERE idTrabalhaEm = '{$cpf}'";
     $result2 = $conn->query($sql2);
     $row = $result2->fetch_object();
 ?>
@@ -37,5 +37,5 @@
 </form>
 
 <div class="col-md-6 mt-3">
-    <a href="?page=funcionario-listar">Voltar para o Listar Funcionário</a>
+    <a href="?page=trabalhaem-listartodos">Voltar para o Listar Trabalhadores</a>
 </div>

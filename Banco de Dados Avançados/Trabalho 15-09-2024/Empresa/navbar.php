@@ -25,6 +25,9 @@
                     <a class="nav-link active" aria-current="page" href="?page=local_departamentos_listar">Local Departamentos</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="?page=trabalhaem-listartodos">Trabalha Em</a>
+                </li>
+                <li class="nav-item">
                     <b><a class="nav-link active" aria-current="page" href="logout.php" style="color: red;">Sair</a></b>
                 </li>
             </ul>

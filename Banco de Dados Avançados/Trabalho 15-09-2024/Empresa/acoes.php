@@ -368,16 +368,16 @@
 		echo $sql;
 		$res = $conn->query($sql);
 		if ($res==true) {
-			header('Location: home.php?page=funcionario-listar');
+			header('Location: home.php?page=trabalhaem-listartodos');
 		} else {
 			print "<script>alert('Não foi possivel deletar o trabalho');</script>";
-			print "<script>location.href='?page=funcionario-listar';</script>";
+			print "<script>location.href='?page=trabalhaem-listartodos';</script>";
 		}
 		exit;
 	}
 
 	if (isset($_POST['trabalhaem_create'])) {
-		$cpf = $_POST['cpf'];
+		$cpf = $_POST['cpfGerente'];
 		$hora = $_POST['hora'];
 		$idprojeto = $_POST['idprojeto'];
 
@@ -385,10 +385,10 @@
 		echo $sql;
 		$res = $conn->query($sql);
 		if ($res==true) {
-			header('Location: home.php?page=funcionario-listar');
+			header('Location: home.php?page=trabalhaem-listartodos');
 		} else {
 			print "<script>alert('Não foi possivel criar o trabalho');</script>";
-			print "<script>location.href='?page=funcionario-listar';</script>";
+			print "<script>location.href='?page=trabalhaem-listartodos';</script>";
 		}
 		exit;
 	}
@@ -398,14 +398,14 @@
 		$hora = $_POST['hora'];
 		$idprojeto = $_POST['idprojeto'];
 		$idTrabalhaEm = $_POST['idtrabalhaem'];
-		$sql = "UPDATE trabalha_em SET fkCpf = '{$cpf}', fkIdProjeto = '{$idprojeto}', Horas = {$hora} WHERE idTrabalhaEm = {$idTrabalhaEm}";
+		$sql = "UPDATE trabalha_em SET idTrabalhaEm = '{$cpf}', fkIdProjeto = '{$idprojeto}', Horas = {$hora} WHERE idTrabalhaEm = {$idTrabalhaEm}";
 		echo $sql;
 		$res = $conn->query($sql);
 		if ($res==true) {
-			header('Location: home.php?page=funcionario-listar');
+			header('Location: home.php?page=trabalhaem-listartodos');
 		} else {
 			print "<script>alert('Não foi possivel criar o trabalho');</script>";
-			print "<script>location.href='?page=funcionario-listar';</script>";
+			print "<script>location.href='?page=trabalhaem-listartodos';</script>";
 		}
 		exit;
 	}

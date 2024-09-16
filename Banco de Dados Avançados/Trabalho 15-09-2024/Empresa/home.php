@@ -84,6 +84,9 @@
                         case "trabalhaem-editar":
                           include("trabalhaem/trabalhaem-editar.php");
                           break;
+                        case "trabalhaem-listartodos":
+                          include("trabalhaem/trabalhaem-listartodos.php");
+                          break;
                         case "index":
                           include("index.php");
                           break;
