@@ -91,11 +91,12 @@
                     } else {
                       ?>
                       <div class="card-header">
-                        <h4>Funcionarios do Mês</h4>
+                        <h4>Projetos</h4>
                         <table class="table table-striped">
                           <thead>
                             <tr>
-                              <th>Nome</th>
+                              <th>Nome do Projeto</th>
+                              <th>Quantidade de Funcionarios</th>
                               <th>Horas Trabalhadas</th>
                             </tr>
                           </thead>
@@ -105,19 +106,29 @@
                             $pass = "root";
                             $db = "dbempresa";
                             $connect = new mysqli($host, $user, $pass, $db);
-                            $sql = "SELECT funcionario.Nome, trabalha_em.Horas
-                                    FROM dbempresa.funcionario
-                                    INNER JOIN dbempresa.trabalha_em ON funcionario.Cpf = trabalha_em.fkCpf
-                                    ORDER BY trabalha_em.Horas DESC
-                                    LIMIT 10;";
+                            $sql = "SELECT 
+                                        p.Nome AS NomeProjeto,
+                                        COUNT(te.fkCpf) AS QuantidadeFuncionarios,
+                                        SUM(te.Horas) AS TotalHoras
+                                    FROM 
+                                        dbempresa.trabalha_em te
+                                    JOIN 
+                                        dbempresa.projeto p ON te.fkIdProjeto = p.idProjeto
+                                    GROUP BY 
+                                        p.Nome
+                                    ORDER BY 
+                                        TotalHoras DESC
+                                    LIMIT 7;
+                                    ";
                             $res = $connect->query($sql);
                             $qtd = $res->num_rows;
                             if($qtd > 0) {
                               while($row = $res->fetch_object()) {
                           ?>
                             <tr>
-                              <td><?=$row->Nome?></td>
-                              <td><?=$row->Horas?></td>
+                              <td><?=$row->NomeProjeto?></td>
+                              <td><?=$row->QuantidadeFuncionarios?></td>
+                              <td><?=$row->TotalHoras?></td>
                             </tr>
                           <?php
                               }
