@@ -16,11 +16,11 @@ typedef struct Pessoa{
 
 void PreencherDados(struct Pessoa *p){
     printf("Digite o nome da pessoa: \n");
-    scanf("%s", &p->nome);
+    scanf("%s", p->nome);
     printf("Digite a data de nascimento da pessoa: (Ex: 11/11/2011) \n");
-    scanf("%s", &p->dataNascimento);
+    scanf("%s", p->dataNascimento);
     printf("Digite o CPF da pessoa: (Ex: 123.123.123-12)\n");
-    scanf("%s", &p->cpf);
+    scanf("%s", p->cpf);
 }
 
 void ExibirDados(struct Pessoa *p){
@@ -29,12 +29,9 @@ void ExibirDados(struct Pessoa *p){
     printf("Cpf da pessoa: %s\n", p->cpf);
 }
 
-
-
-
 void main(){
     struct Pessoa *p;
-    malloc(sizeof(struct Pessoa));
+    p = malloc(sizeof(struct Pessoa));
     if(p == NULL){
         printf("Não foi possivel alocar memoria\n");
         exit(1);
