@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// NÃO CONCLUIDA
-
 /* Questão: Criar um tipo abstrato de dados que represente uma pessoa, contendo nome, data de nascimento e CPF. 
 Crie uma variável que é um ponteiro para este TAD (no programa principal). Depois crie uma função que receba este ponteiro 
 e preencha os dados da estrutura e também uma uma função que receba este ponteiro e imprima os dados da estrutura. 
