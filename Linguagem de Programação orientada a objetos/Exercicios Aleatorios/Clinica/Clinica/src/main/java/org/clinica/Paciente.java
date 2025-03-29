@@ -9,8 +9,6 @@ public class Paciente {
     private String nome;
     private String cpf;
 
-    public Paciente(){ }
-
     public Paciente(String nome, String cpf){
         this.nome = nome;
         this.cpf = cpf;
@@ -18,16 +16,14 @@ public class Paciente {
 
     public void setNome(String nome){
         if(nome.length() < 3){
-            System.err.println("ERRO, O NOME NÃO PODE SER MENOR QUE 3");
-            return;
+            throw new RuntimeException("ERRO, O NOME NÃO PODE SER MENOR QUE 3");
         }
         this.nome = nome;
     }
 
     public void setCpf(String cpf){
         if(cpf.length() < 11){
-            System.err.println("ERRO, O CPF CONTEM "+cpf.length()+" DIGITOS E DEVE TER 11.");
-            return;
+            throw new RuntimeException("ERRO, O CPF CONTEM "+cpf.length()+" DIGITOS E DEVE TER 11.");
         }
         this.cpf = cpf;
     }

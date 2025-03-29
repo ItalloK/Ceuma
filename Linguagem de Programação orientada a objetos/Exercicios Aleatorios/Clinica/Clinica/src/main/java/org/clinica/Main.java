@@ -15,10 +15,20 @@ public class Main {
         /*------------------------------------------------------------------*/
 
         Medico m = new Medico("Barbara", "Neurologista", "123456");
-        m.setNome("AB"); // erro, nome menor que 3 letras
-        m.setCrm("1234567"); // erro, só pode 6 digitos.
-        Medico m2 = new Medico("Maria", "Pediatra", "654321");
 
+        try {
+            m.setNome("AB"); // erro, nome menor que 3 letras
+        } catch (RuntimeException rs) {
+            System.out.println(rs.getMessage());
+        }
+
+        try{
+            m.setCrm("1234567"); // erro, só pode 6 digitos.
+        }catch (RuntimeException rs){
+            System.out.println(rs.getMessage());
+        }
+
+        Medico m2 = new Medico("Maria", "Pediatra", "654321");
 
         System.out.println("--------------------------------------------------------------");
 

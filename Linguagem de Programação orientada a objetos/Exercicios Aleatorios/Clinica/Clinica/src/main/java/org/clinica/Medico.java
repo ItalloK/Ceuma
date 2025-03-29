@@ -11,9 +11,6 @@ public class Medico {
     private String especialidade;
     private String crm;
 
-
-    public Medico() { }
-
     public Medico(String nome, String especialidade, String crm){
         this.nome = nome;
         this.especialidade = especialidade;
@@ -22,16 +19,14 @@ public class Medico {
 
     public void setNome(String nome){
         if(nome.length() < 3){
-            System.err.println("ERRO, O NOME NÃO PODE SER MENOR QUE 3");
-            return;
+            throw new RuntimeException("ERRO, O NOME NÃO PODE SER MENOR QUE 3 DIGITOS.");
         }
         this.nome = nome;
     }
 
     public void setCrm(String crm){
         if(crm.length() != 6){
-            System.err.println("CODIGO CRM MAIOR QUE 6, DIGITE APENAS OS 6 DIGITOS.");
-            return;
+            throw new RuntimeException("CODIGO CRM MAIOR QUE 6, DIGITE APENAS OS 6 DIGITOS.");
         }
         this.crm = crm;
     }
