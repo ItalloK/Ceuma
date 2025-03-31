@@ -19,8 +19,14 @@ public class CartaoDeCredito implements Pagamento{
     }
 
     @Override
-    public boolean realizarPagamento(double valor){
-        return true;
+    public boolean processarPagamento(double valor){
+        if(valor <= limiteDisponivel){
+            limiteDisponivel -= valor;
+            System.out.println("Pagamento de $"+valor+" aprovado no cartão de crédito!");
+            return true;
+        }
+        System.out.println("Pagamento inválido: Limite indisponivel.");
+        return false;
     }
 
     @Override

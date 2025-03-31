@@ -14,7 +14,8 @@ public class Boleto implements Pagamento{
     }
 
     @Override
-    public boolean realizarPagamento(double valor){
+    public boolean processarPagamento(double valor){
+        System.out.println("Boleto no valor de $"+valor+" gerado com sucesso, aguarde o pagamento!");
         return true;
     }
 

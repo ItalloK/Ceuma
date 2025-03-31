@@ -1,6 +1,6 @@
 package org.clinica;
 
 public interface Pagamento {
-    boolean realizarPagamento(double valor);
+    boolean processarPagamento(double valor);
     String tipoMetodo();
 }

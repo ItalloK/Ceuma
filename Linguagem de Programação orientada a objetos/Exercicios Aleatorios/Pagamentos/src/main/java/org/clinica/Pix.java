@@ -17,8 +17,14 @@ public class Pix implements Pagamento{
     }
 
     @Override
-    public boolean realizarPagamento(double valor){
-        return true;
+    public boolean processarPagamento(double valor){
+        if(valor <= saldo){
+            saldo -= valor;
+            System.out.println("Pagamento de $"+valor+" realizado via PIX.");
+            return true;
+        }
+        System.out.println("Pagamento inválido: Saldo indisponivel.");
+        return false;
     }
 
     @Override
