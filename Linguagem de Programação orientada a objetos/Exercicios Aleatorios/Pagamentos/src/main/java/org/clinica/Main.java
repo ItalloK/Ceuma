@@ -8,6 +8,7 @@ public class Main {
         CartaoDeCredito cartao = new CartaoDeCredito("12345", "Italo", 10000);
         Pix pix = new Pix("12345678912", 1000);
         Boleto boleto = new Boleto("1234-1234-1234-1234");
+        Cliente cliente = new Cliente("Italo");
 
 
         p.realizarPagamento(cartao, 1000);
