@@ -19,5 +19,6 @@ public class Produto {
     public String infoProduto(){
         return "";
     }
+    public String getNomeProduto(){ return ""; }
 
 }

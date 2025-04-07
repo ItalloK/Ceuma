@@ -18,4 +18,9 @@ public class Arroz extends Produto {
         return ("Nome: Arroz | Estoque: "+getEstoque()+" | Codigo de Barras: "+getCodigoDeBarras()+" | Preco: "+getPreco()+" | Peso: "+this.peso+"Kg");
     }
 
+    @Override
+    public String getNomeProduto(){
+        return "Arroz";
+    }
+
 }
